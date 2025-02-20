@@ -1,0 +1,10 @@
+.horizontal-list{
+    text-align:center; 
+    background-color: grey;
+    height: 30px; 
+}
+.horizontal-list li{
+    display:inline;
+    margin-right: 20px; 
+     color: white;
+}
