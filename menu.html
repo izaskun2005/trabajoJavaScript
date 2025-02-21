@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <title>Menu</title>
+    <style>
+      body {
+        background-color: lightblue;
+      }
+
+      /* Estilos del panel de personalización */
+      #personalizerPanel {
+        display: none;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      .option {
+        cursor: pointer;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid black;
+      }
+
+      /* Estilo para la lista horizontal */
+      .horizontal-list {
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+      }
+
+      .horizontal-list li {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menú -->
+    <ul class="horizontal-list">
+      <li><button id="personalizerBtn">Personalizer</button></li>
+      <li>Form</li>
+      <li>Images</li>
+    </ul>
+
+    <h1>Welcome to personalizer</h1>
+    <p>This is the paragraph that you can adapt its content.</p>
+    <p>Click to personalizer banner.</p>
+
+    <!-- Panel de personalización -->
+    <div id="personalizerPanel">
+      <div class="option" onclick="changeColor('red')">Red</div>
+      <div class="option" onclick="changeColor('green')">Green</div>
+      <div class="option" onclick="changeColor('blue')">Blue</div>
+      <div class="option" onclick="changeColor('black')">Black</div>
+      <div class="option" onclick="changeSize('20px')">Small</div>
+      <div class="option" onclick="changeSize('30px')">Medium</div>
+      <div class="option" onclick="changeSize('40px')">Large</div>
+    </div>
+
+    <script>
+      // Mostrar u ocultar el panel de personalización
+      document.getElementById('personalizerBtn').onclick = function() {
+        const panel = document.getElementById('personalizerPanel');
+        panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+      };
+
+      // Cambiar el color de fondo
+      function changeColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+
+      // Cambiar el tamaño de la fuente
+      function changeSize(size) {
+        document.querySelector('h1').style.fontSize = size;
+      }
+    </script>
+  </body>
+</html>
+
+
+
