@@ -1,52 +1,63 @@
 
 /* Estilos generales para el cuerpo */
 body {
-    background-color: lightblue; /* Color de fondo inicial */
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Estilos para el menú horizontal */
-  .horizontal-list {
-    text-align: center;
-    background-color: grey;
-    height: 30px;
-    padding: 0; /* Eliminar márgenes del contenedor */
-    list-style-type: none; /* Quitar los puntos de la lista */
-  }
-  
-  .horizontal-list li {
-    display: inline;
-    margin-right: 20px;
-    color: white;
-  }
-  
-  /* Estilos del panel de personalización */
-  #personalizerPanel {
-    display: none; /* Ocultar el panel por defecto */
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el panel */
-  }
-  
-  /* Estilos para las opciones del panel */
-  .option {
-    cursor: pointer;
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid black;
-    display: inline-block;
-  }
-  
-  /* Estilos para el botón Personalizer */
-  #personalizerBtn {
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #personalizerBtn:hover {
-    background-col
-  }
+  background-color: lightblue; /* Color de fondo inicial */
+  font-family: Arial, sans-serif;
+}
+
+
+   
+
+
+/* Estilos para el botón Personalizer */
+#personalizerBtn {
+
+
+  color: white;
+  background-color: #444444;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+/* Estilos del panel de personalización */
+#personalizerPanel {
+  display: none;
+  background-color: white;
+  position: relative;
+  margin-top: 9px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el panel */
+}
+.option {
+  cursor: pointer;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+
+/* Estilos para el menú horizontal */
+.horizontal-list {
+display: flex;
+text-align: center;
+justify-content: center;
+background-color: #444444;
+height: 30px;
+padding: 0; /* Eliminar márgenes del contenedor */
+list-style-type: none; /* Quitar los puntos de la lista */
+}
+.horizontal-list h3{
+text-align: left;
+}
+.horizontal-list li {
+  margin-right: 10px;
+  display: inline;  
+  margin-top: 2px;
+}
+#personalizerBtn:hover {
+  background-color: #444444;
+}

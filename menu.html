@@ -5,59 +5,59 @@
     <meta charset="utf-8" />
     <title>Menu</title>
     <style>
-      body {
-        background-color: lightblue;
-      }
-
-      /* Estilos del panel de personalización */
-      #personalizerPanel {
-        display: none;
-        background-color: white;
-        padding: 10px;
-        border: 1px solid #ccc;
-      }
-
-      .option {
-        cursor: pointer;
-        margin: 5px;
-        padding: 5px;
-        border: 1px solid black;
-      }
-
-      /* Estilo para la lista horizontal */
-      .horizontal-list {
-        list-style-type: none;
-        display: flex;
-        padding: 0;
-      }
-
-      .horizontal-list li {
-        margin-right: 10px;
-      }
+     
     </style>
   </head>
   <body>
     <!-- Menú -->
-    <ul class="horizontal-list">
-      <li><button id="personalizerBtn">Personalizer</button></li>
+
+
+    <ul class="horizontal-list" >
+      <li>
+        <button id="personalizerBtn">Personalizer</button>
+         <!-- Panel de personalización -->
+    <div id="personalizerPanel">
+      <h3>bg_color</h3>      
+
+
+      <div>
+        <div class="option" style="background-color:red ;" onclick="changeColor('red')"></div>
+        <div class="option" style="background-color:green ;" onclick="changeColor('green')"></div>
+        <div class="option"style="background-color: blue ;" onclick="changeColor('blue')"></div>
+        <div class="option" style="background-color:gray ;" onclick="changeColor('black')"></div>
+        <div class="option"style="background-color:black ;" onclick="changeColor('black')"></div>
+      </div>
+      <h3>change_letters</h3>  
+      <div>
+        <div class="option" onclick="changeSize('20px')">XS</div>
+        <div class="option" onclick="changeSize('30px')"> S</div>
+        <div class="option" onclick="changeSize('40px')"> M</div>
+        <div class="option" onclick="changeSize('50px')"> L</div>
+        <div class="option" onclick="changeSize('60px')">XL</div>
+      </div>
+      <div>
+        <div class="option" onclick="changeSize('20px')">XS</div>
+        <div class="option" onclick="changeSize('30px')"> S</div>
+        <div class="option" onclick="changeSize('40px')"> M</div>
+        <div class="option" onclick="changeSize('50px')"> L</div>
+        <div class="option" onclick="changeSize('60px')">XL</div>
+      </div>
+
+
+    </div>
+      </li>
       <li>Form</li>
       <li>Images</li>
     </ul>
+
 
     <h1>Welcome to personalizer</h1>
     <p>This is the paragraph that you can adapt its content.</p>
     <p>Click to personalizer banner.</p>
 
-    <!-- Panel de personalización -->
-    <div id="personalizerPanel">
-      <div class="option" onclick="changeColor('red')">Red</div>
-      <div class="option" onclick="changeColor('green')">Green</div>
-      <div class="option" onclick="changeColor('blue')">Blue</div>
-      <div class="option" onclick="changeColor('black')">Black</div>
-      <div class="option" onclick="changeSize('20px')">Small</div>
-      <div class="option" onclick="changeSize('30px')">Medium</div>
-      <div class="option" onclick="changeSize('40px')">Large</div>
-    </div>
+
+   
+
 
     <script>
       // Mostrar u ocultar el panel de personalización
@@ -66,10 +66,12 @@
         panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
       };
 
+
       // Cambiar el color de fondo
       function changeColor(color) {
         document.body.style.backgroundColor = color;
       }
+
 
       // Cambiar el tamaño de la fuente
       function changeSize(size) {
@@ -78,6 +80,9 @@
     </script>
   </body>
 </html>
+
+
+
 
 
 
