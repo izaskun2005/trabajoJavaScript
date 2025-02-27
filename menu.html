@@ -9,13 +9,13 @@
     </style>
   </head>
   <body>
-    <!-- Menú -->
+   
 
 
     <ul class="horizontal-list" >
       <li>
         <button id="personalizerBtn">Personalizer</button>
-         <!-- Panel de personalización -->
+         
     <div id="personalizerPanel">
       <h3>bg_color</h3>      
 
@@ -60,20 +60,20 @@
 
 
     <script>
-      // Mostrar u ocultar el panel de personalización
+      
       document.getElementById('personalizerBtn').onclick = function() {
         const panel = document.getElementById('personalizerPanel');
         panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
       };
 
 
-      // Cambiar el color de fondo
+      
       function changeColor(color) {
         document.body.style.backgroundColor = color;
       }
 
 
-      // Cambiar el tamaño de la fuente
+      
       function changeSize(size) {
         document.querySelector('h1').style.fontSize = size;
       }
