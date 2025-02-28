@@ -21,11 +21,11 @@
 
 
       <div>
-        <div class="option" style="background-color:red ;" onclick="changeColor('red')"></div>
-        <div class="option" style="background-color:green ;" onclick="changeColor('green')"></div>
-        <div class="option"style="background-color: blue ;" onclick="changeColor('blue')"></div>
-        <div class="option" style="background-color:gray ;" onclick="changeColor('black')"></div>
-        <div class="option"style="background-color:black ;" onclick="changeColor('black')"></div>
+        <div class="option" style="background-color:rgb(201, 143, 143) ;" onclick="changeColor('red')"></div>
+        <div class="option" style="background-color:rgb(138, 213, 138) ;" onclick="changeColor('green')"></div>
+        <div class="option" style="background-color: rgb(140, 190, 232) ;" onclick="changeColor('blue')"></div>
+        <div class="option" style="background-color:rgb(169, 160, 160) ;" onclick="changeColor('black')"></div>
+        <div class="option" style="background-color:rgb(136, 124, 124) ;" onclick="changeColor('black')"></div>
       </div>
       <h3>change_letters</h3>  
       <div>
@@ -36,12 +36,16 @@
         <div class="option" onclick="changeSize('60px')">XL</div>
       </div>
       <div>
-        <div class="option" onclick="changeSize('20px')">XS</div>
-        <div class="option" onclick="changeSize('30px')"> S</div>
-        <div class="option" onclick="changeSize('40px')"> M</div>
-        <div class="option" onclick="changeSize('50px')"> L</div>
-        <div class="option" onclick="changeSize('60px')">XL</div>
+        <div>
+          <div class="option" onclick="changeFont('Arial')">XS</div>
+          <div class="option" onclick="changeFont('Verdana')">S</div>
+          <div class="option" onclick="changeFont('Times New Roman')">M</div>
+          <div class="option" onclick="changeFont('Courier New')">L</div>
+          <div class="option" onclick="changeFont('Georgia')">XL</div>
+        
+
       </div>
+      
 
 
     </div>
@@ -50,7 +54,7 @@
       <li>Images</li>
     </ul>
 
-
+    
     <h1>Welcome to personalizer</h1>
     <p>This is the paragraph that you can adapt its content.</p>
     <p>Click to personalizer banner.</p>
@@ -66,6 +70,12 @@
         panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
       };
 
+      function changeFont(font) {
+        document.querySelectorAll("h1, p").forEach(element => {
+            element.style.fontFamily = font;
+        });
+    }
+      
 
       
       function changeColor(color) {
@@ -80,7 +90,6 @@
     </script>
   </body>
 </html>
-
 
 
 

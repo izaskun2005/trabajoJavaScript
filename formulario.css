@@ -1,0 +1,46 @@
+
+form {
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.gender-options {
+    display: flex;
+    justify-content: space-around; 
+    margin-top: 10px; 
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;  
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;  
+}
+
+label {
+    display: inline-block;
+}
+
+
+
+

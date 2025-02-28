@@ -1,25 +1,53 @@
 <form action="/action_page.php">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="formulario.css">
+    </head>
     <label for="fname">Full name:</label>
     <input type="text" id="fname" name="fname"><br><br>
+    
     <label for="lname">Email:</label>
-    <input type="emailº" id="lname" name="lname"><br><br>
+    <input type="email" id="lname" name="lname" onchange="validateEmail()"><br><br>
+    <button type="button" onclick="validateEmail()">Validate</button>
+    
+    <div id="error-message" style="color: red;"></div>
+    
+    <script>
+        function validateEmail() {
+            let email = document.getElementById("lname").value;
+            document.getElementById("error-message").textContent = /\S+@\S+\.\S+/.test(email) ? "" : "Email incorrecto, intenta de nuevo :(";
+        }
+    </script>    
 
+    <div>
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="genero" id="masculino" value="masculino">
+    </div>
+
+    <div> 
+        <label for="femenino">Femenino</label>
+        <input type="radio" name="genero" id="femenino" value="femenino">
+    </div>
+
+    <div>
+        <label for="otro">Otro</label>
+        <input type="radio" name="genero" id="otro" value="otro">
+    </div>
     
     <div>
-    <label for="masculino">Masculino</label>
-    <input type="radio" name="genero" id="masculino" value="masculino">
-  </div>
-  <div> 
-    <label for="femenino">Femenino</label>
-    <input type="radio" name="genero" id="femenino" value="femenino">
-  </div>
-  <div>
-    <label for="otro">Otro</label>
-    <input type="radio" name="genero" id="otro" value="otro">
-    <div>
-        country:
-            <select 
-                <option>Spain</option> 
-            </select>
+        <label for="country">Country:</label>
+        <select id="country" name="country" required onchange="toggleCommunity()">
+            <option value="" disabled selected>Select your country</option>
+            <option value="spain">Spain</option>
+        </select>
     </div>
-  </form>
+    <div id="community-container" style="display: none;">
+        <label for="community">Community:</label>
+        <select id="community" name="community">
+            <option value="navarra">Navarra</option>
+        </select>
+    </div>
+    <button type="submit">Send</button>
+</form>

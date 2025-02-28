@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="imagenes.css">
+</head>
+<body>
+
+    <div class="contenedor-images">
+        <h2>Magic Button: Create a Change Image</h2>
+        <button id="changeManualImage">Change Image</button>
+        <img id="manualImage" src="./imagenes/html.png" alt="Image">
+    </div>
+
+    <div class="contenedor-cambio-automatico">
+        <h2>Contenedor de cambio automático</h2>
+        <img id="autoImage" src="./imagenes/html.png" alt="Automatic Change Image">
+    </div>
+
+    <script>
+    
+        const imagenes = [
+            "./imagenes/html.png",
+            "./imagenes/css.png",
+            "./imagenes/js.png",
+            "./imagenes/java.png",
+            "./imagenes/mysql.png",
+            "./imagenes/ruby.png"
+        ];
+
+        let contadorManual = 0; 
+        let contadorAuto = 0;  
+
+        
+        document.getElementById("changeManualImage").addEventListener('click', function() {
+            contadorManual = (contadorManual + 1) % imagenes.length;  
+            document.getElementById("manualImage").src = imagenes[contadorManual];
+        });
+
+        
+        function cambiarImagenAutomatica() {
+            contadorAuto = (contadorAuto + 1) % imagenes.length;  
+            document.getElementById("autoImage").src = imagenes[contadorAuto];
+        }
+
+        
+        setInterval(cambiarImagenAutomatica, 500);
+    </script>
+</body>
+</html>

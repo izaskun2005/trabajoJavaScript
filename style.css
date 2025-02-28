@@ -5,10 +5,6 @@ body {
 }
 
 
-   
-
-
-/* Estilos para el botón Personalizer */
 #personalizerBtn {
 
 
@@ -59,4 +55,11 @@ text-align: left;
 }
 #personalizerBtn:hover {
   background-color: #444444;
+}
+.option {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  background-color: lightgray;
+  cursor: pointer;
 }
